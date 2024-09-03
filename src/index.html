@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Random Card Generator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -11,19 +15,22 @@
       crossorigin="anonymous"
     />
     <link rel="shortcut icon" href="./4geeks.ico" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+      <h1 class="text-white fw-bolder">Random Card Generator</h1>
+      <div id="card" class="card mx-auto my-4"></div>
+      <button id="newCardBtn" class="btn btn-success">
+        Generar Nueva Carta
+      </button>
+      <div class="mt-4">
+        <label for="cardWidth" class="ml-2 text-white">Ancho (px):</label>
+        <input type="text" id="cardWidth" placeholder="150" />
+        <label for="cardHeight" class="ml-2 text-white">Alto (px):</label>
+        <input type="text" id="cardHeight" placeholder="225" />
       </div>
     </div>
+    <script src="./app.js"></script>
   </body>
 </html>

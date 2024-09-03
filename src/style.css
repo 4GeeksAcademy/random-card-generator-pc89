@@ -1,1 +1,77 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: #850303;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Contenedor de la carta */
+.card {
+  width: 150px;
+  height: 225px;
+  border-radius: 10px;
+  border: 2px solid black;
+  background-color: white;
+  position: relative;
+  margin: 20px auto;
+  transition: width 0.3s, height 0.3s;
+  text-align: center;
+}
+
+/* Número central */
+.card .value {
+  font-size: 4rem;
+  display: block;
+  margin: auto;
+}
+
+/* Símbolos de las esquinas */
+.card::before,
+.card::after {
+  content: attr(data-symbol);
+  position: absolute;
+  font-size: 2.5rem;
+}
+
+.card::before {
+  top: 5px;
+  left: 10px;
+}
+
+.card::after {
+  bottom: 5px;
+  right: 10px;
+  transform: rotate(180deg); /* Rotación para el símbolo de abajo */
+}
+
+/*Palos de las cartas */
+.spade,
+.club {
+  color: black;
+}
+
+.heart,
+.diamond {
+  color: red;
+}
+
+/* Botón centrado */
+#newCardBtn {
+  margin-top: 20px;
+}
+
+/* Todo centrado */
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/*Inputs de texto */
+input[type="text"] {
+  width: 70px;
+  text-align: center;
+  margin-left: 7px;
+}
