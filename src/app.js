@@ -33,17 +33,14 @@ window.onload = function() {
     cardElement.className = `card ${randomSuit}`;
     cardElement.setAttribute("data-symbol", randomSymbol);
 
-    // Actualiza el contenido de la carta
-    cardElement.innerHTML = `<span class="value">${randomValue}</span>`; // Solo el número en el centro
+    cardElement.innerHTML = `<span class="value">${randomValue}</span>`;
 
-    // Ajusta el tamaño de la carta según los valores de los inputs
     const width = document.getElementById("cardWidth").value || 150;
     const height = document.getElementById("cardHeight").value || 225;
     cardElement.style.width = `${width}px`;
     cardElement.style.height = `${height}px`;
   }
 
-  // Genera una nueva carta cada 10 segundos
   setInterval(generateRandomCard, 10000);
 
   const newCardBtn = document.getElementById("newCardBtn");
@@ -52,6 +49,5 @@ window.onload = function() {
     newCardBtn.addEventListener("click", generateRandomCard);
   }
 
-  // Genera una carta al cargar la página
   generateRandomCard();
 };
